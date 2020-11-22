@@ -36,19 +36,30 @@ public class RationalNumber extends RealNumber {
   public int getDenominator(){
     return this.denominator;
   }
+
+
   /**
   *@return a new RationalNumber that has the same numerator
   *and denominator as this RationalNumber but reversed.
   */
   public RationalNumber reciprocal(){
-    return null;
+    RationalNumber answer = new RationalNumber(this.denominator, this.numerator);
+    return answer;
   }
+
+
   /**
   *@return true when the RationalNumbers have the same numerators and denominators, false otherwise.
   */
   public boolean equals(RationalNumber other){
+    if (this.getNumerator() == other.getNumerator()) {
+      if (this.getDenominator() == other.getDenominator()) {
+        return true;
+      }
+    }
     return false;
   }
+
 
   /**
   *@return the value expressed as "3/4" or "8/3"
