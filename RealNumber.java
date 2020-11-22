@@ -65,6 +65,17 @@ public class RealNumber{
     return answer;
   }
 
+  /*
+  *Return a new RealNumber that has the value of:
+  *this divided by the other
+  */
+  public RealNumber divide(RealNumber other){
+    double currVal = this.getValue();
+    double newVal = other.getValue();
+    RealNumber answer = currVal / newVal;
+    return answer;
+  }
+
   
 
 }
