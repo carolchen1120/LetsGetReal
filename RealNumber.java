@@ -54,6 +54,17 @@ public class RealNumber{
    return answer;
   }
 
+  /*
+  *Return a new RealNumber that has the value of:
+  *the product of this and the other
+  */
+  public RealNumber multiply(RealNumber other){
+    double currVal = this.getValue();
+    double newVal = other.getValue();
+    RealNumber answer = currVal * newVal;
+    return answer;
+  }
+
   
 
 }
