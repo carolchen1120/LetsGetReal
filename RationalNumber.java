@@ -34,7 +34,7 @@ public class RationalNumber extends RealNumber {
   *@return the denominator
   */
   public int getDenominator(){
-    return 0;
+    return this.denominator;
   }
   /**
   *@return a new RationalNumber that has the same numerator
