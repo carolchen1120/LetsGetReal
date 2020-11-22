@@ -136,11 +136,15 @@ public class RationalNumber extends RealNumber {
     return answer.reduce();
   }
 
+
   /**
   *Return a new RationalNumber that is the sum of this and the other
   */
   public RationalNumber add(RationalNumber other){
-    return null;
+    int nume = this.getNumerator() * other.getDenominator() + this.getDenominator() * other.getNumerator();
+    int denom = this.getDenominator() * other.getDenominator();
+    RationalNumber answer = new RationalNumber(nume, denom);
+    return answer.reduce();
   }
   /**
   *Return a new RationalNumber that this minus the other
