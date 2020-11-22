@@ -76,6 +76,15 @@ public class RealNumber{
     return answer;
   }
 
-  
+  /*
+  *Return a new RealNumber that has the value of:
+  *this minus the other
+  */
+  public RealNumber subtract(RealNumber other){
+    double currVal = this.getValue();
+    double newVal = other.getValue();
+    RealNumber answer = currVal - newVal;
+    return answer;
+  }
 
 }
