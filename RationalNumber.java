@@ -8,6 +8,12 @@ public class RationalNumber extends RealNumber {
   */
   public RationalNumber(int nume, int deno){
     super(0.0);//this value is ignored!
+    this.numerator = nume;
+    if (deno == 0) {
+      this.numerator = 0;
+      this.denominator = 1;
+    }
+    this.denominator = deno;
   }
 
   public double getValue(){
@@ -93,4 +99,4 @@ public class RationalNumber extends RealNumber {
   public RationalNumber subtract(RationalNumber other){
     return null;
   }
-} 
+}
