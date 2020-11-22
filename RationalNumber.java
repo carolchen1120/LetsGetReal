@@ -21,12 +21,15 @@ public class RationalNumber extends RealNumber {
     return (this.numerator / this.denominator);
   }
 
+
   /**
   *@return the numerator
   */
   public int getNumerator(){
-    return 0;
+    return this.numerator;
   }
+
+
   /**
   *@return the denominator
   */
