@@ -101,14 +101,18 @@ public class RationalNumber extends RealNumber {
     return 1;
   }
 
+
   /**
   *Divide the numerator and denominator by the GCD
   *This must be used to maintain that all RationalNumbers are
   *reduced after construction.
   */
   private void reduce(){
-
+    int gcd = this.gcd();
+    this.numerator = this.numerator / gcd;
+    this.denominator = this.denominator / gcd;
   }
+
   /******************Operations Return a new RationalNumber!!!!****************/
   /**
   *Return a new RationalNumber that is the product of this and the other
