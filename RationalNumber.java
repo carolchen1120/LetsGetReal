@@ -66,7 +66,11 @@ public class RationalNumber extends RealNumber {
   */
   public String toString(){
     String answer = "";
-    answer += this.getNumerator() + "/" + this.getDenominator();
+    if (this.getDenominator() == 1) {
+      answer += this.getNumerator();
+    } else {
+      answer += this.getNumerator() + "/" + this.getDenominator();
+    }
     return answer;
   }
 
