@@ -50,8 +50,7 @@ public class RealNumber extends Number {
    //or other subclasses of RealNumber (that aren't written yet)
    double currVal = this.getValue();
    double newVal = other.getValue();
-   RealNumber answer = new RealNumber();
-   answer = currVal + newVal;
+   RealNumber answer = new RealNumber(currVal + newVal);
    return answer;
   }
 
@@ -62,8 +61,7 @@ public class RealNumber extends Number {
   public RealNumber multiply(RealNumber other){
     double currVal = this.getValue();
     double newVal = other.getValue();
-    RealNumber answer = new RealNumber();
-    answer = currVal * newVal;
+    RealNumber answer = new RealNumber(currVal * newVal);
     return answer;
   }
 
@@ -74,8 +72,7 @@ public class RealNumber extends Number {
   public RealNumber divide(RealNumber other){
     double currVal = this.getValue();
     double newVal = other.getValue();
-    RealNumber answer = new RealNumber();
-    answer = currVal / newVal;
+    RealNumber answer = new RealNumber(currVal / newVal);
     return answer;
   }
 
@@ -86,8 +83,7 @@ public class RealNumber extends Number {
   public RealNumber subtract(RealNumber other){
     double currVal = this.getValue();
     double newVal = other.getValue();
-    RealNumber answer = new RealNumber();
-    answer = currVal - newVal;
+    RealNumber answer = new RealNumber(currVal - newVal);
     return answer;
   }
 

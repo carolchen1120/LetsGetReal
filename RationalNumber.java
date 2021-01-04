@@ -7,7 +7,7 @@ public class RationalNumber extends Number {
   *@param deno the denominator
   */
   public RationalNumber(int nume, int deno){
-    super(0.0);//this value is ignored!
+    super();//this value is ignored!
     this.numerator = nume;
     if (deno == 0) {
       this.numerator = 0;
@@ -112,7 +112,7 @@ public class RationalNumber extends Number {
   *reduced after construction.
   */
   private void reduce(){
-    int gcd = this.gcd();
+    int gcd = this.gcd(this.numerator, this.denominator);
     this.numerator = this.getNumerator() / gcd;
     this.denominator = this.getDenominator() / gcd;
   }
@@ -126,7 +126,8 @@ public class RationalNumber extends Number {
     int nume = this.getNumerator() * other.getNumerator();
     int denom = this.getDenominator() * other.getDenominator();
     RationalNumber answer = new RationalNumber(nume, denom);
-    return answer.reduce();
+    answer.reduce();
+    return answer;
   }
 
 
@@ -137,7 +138,8 @@ public class RationalNumber extends Number {
     int nume = this.getNumerator() * other.getDenominator();
     int denom = this.getDenominator() * other.getNumerator();
     RationalNumber answer = new RationalNumber(nume, denom);
-    return answer.reduce();
+    answer.reduce();
+    return answer;
   }
 
 
@@ -148,7 +150,8 @@ public class RationalNumber extends Number {
     int nume = this.getNumerator() * other.getDenominator() + this.getDenominator() * other.getNumerator();
     int denom = this.getDenominator() * other.getDenominator();
     RationalNumber answer = new RationalNumber(nume, denom);
-    return answer.reduce();
+    answer.reduce();
+    return answer;
   }
   /**
   *Return a new RationalNumber that this minus the other
@@ -157,6 +160,7 @@ public class RationalNumber extends Number {
     int nume = this.getNumerator() * other.getDenominator() - this.getDenominator() * other.getNumerator();
     int denom = this.getDenominator() * other.getDenominator();
     RationalNumber answer = new RationalNumber(nume, denom);
-    return answer.reduce();
+    answer.reduce();
+    return answer;
   }
 }
